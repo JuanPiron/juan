@@ -1,0 +1,28 @@
+git init : initialise un repertoire
+
+git clone https://... : recupere un projet (correspond à un fetch + un merge)
+
+en local :
+
+git add fichier.txt
+git commit fichier.txt -m "blablabla" ou git commit -a "blabla"
+
+travail avec un depôt distant : 
+
+git remote add origin https://... : ajout d'un depôt distant, origin correspond au nom que l'on donne au dépôt
+git remote -v : liste les reps distants (dépôts)
+git pull origin master : mise à jour avec la branche master du dépôt origin
+git push origin master : on envoie à la branche master du dépôt origin nos modifs
+
+branche :
+
+git branch test : créé une branche test en local
+git branch : liste les branches présentes
+git push orgin test : permet de pusher sur la nouvelle branche mais aussi de la créer sur le dépôt distant
+git checkout test : permet de switcher entre les différentes branches
+git merge test : depuis la branche master, permet de fusionner le travail de la branche test
+git push origin --delete test : supprime la branche dans le rep distant
+git branch -d test : supprime la branche localement
+git stash : pour mettre de cote un travail que l'on ne veux pas commit si on doit changer de branch
+git stash apply : pour le récupérer au retour.
+
