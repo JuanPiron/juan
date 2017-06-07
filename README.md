@@ -42,7 +42,7 @@ Visite rapide du CT + badge.
 Prise en main de capirca.
 
 07 Juin 2017 : 
-Circuit arrivé. Revision de GitHub.
+Circuit arrivé. Revision de GitHub. Modif de aclgen.py pour le rep de dest des acls crées (filters).
 
 08 Juin 2017 :
 
