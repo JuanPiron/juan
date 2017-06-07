@@ -23,6 +23,25 @@ git checkout test : permet de switcher entre les différentes branches
 git merge test : depuis la branche master, permet de fusionner le travail de la branche test
 git push origin --delete test : supprime la branche dans le rep distant
 git branch -d test : supprime la branche localement
-git stash : pour mettre de cote un travail que l'on ne veux pas commit si on doit changer de branch
-git stash apply : pour le récupérer au retour.
 
+stash :
+git stash : pour mettre de cote un travail que l'on ne veux pas commit si on doit changer de branch
+git stash apply ou git stash apply stash@{0} : pour le récupérer au retour.
+git stash list : affiche la pile
+git stash drop stash@{0} : supprime le stash
+git stash pop : pour appliquer la remise puis la suprimer
+
+difference :
+
+diff master origin/master : différence entre la branche local et celle dans le rep distant
+
+les differentes copies dans gits : 
+
+workspace, index, local repository, remote repository
+
+add : workspace --> index
+commit : index --> local
+push : local --> remote
+fetch : remote --> local
+merge : local --> workspace
+pull : remote --> workspace
