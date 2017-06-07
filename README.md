@@ -23,6 +23,18 @@ Le stage consistera donc à
 
 ·         Adapter les règles existante pour les injecter dans le système CAPIRCA.
 
+Reformulation : 
+
+1/ Créer un generator CiscoASA pour les routeurs PGL.
+
+2/ 
+
+a) Suffit de mettre capirca sur un remote repository de creer la policie ou de la modifer et de lancer le script python, suffit juste ensuite de faire git add, commit et push.
+b) Mettre en place un remote repository sur GitHub permettant la gestion des différents ACLs (filters et policies (surtout)), tout cela directement dans les repertoires de pol et filters de capirca.
+
+3/ créer les policies des ACLs déjà existante au niveau de PGLs
+
+
 Compte-rendu journalier : 
 
 06 Juin 2017 :
