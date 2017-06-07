@@ -22,3 +22,12 @@ Le stage consistera donc à
 ·         Mettre en place un mécanisme de génération des règles et de leur gestion en configuration (git ou subversion ?) à partir des demandes de flux utilisateurs.
 
 ·         Adapter les règles existante pour les injecter dans le système CAPIRCA.
+
+Compte-rendu journalier : 
+
+06 Juin 2017 :
+Visite rapide du CT + badge.
+Prise en main de capirca.
+
+07 Juin 2017 : 
+Circuit arrivé. Revision de GitHub.
