@@ -5,6 +5,7 @@ git clone https://... : recupere un projet (correspond à un fetch + un merge)
 en local :
 
 git add fichier.txt
+git add -A : tous
 git commit fichier.txt -m "blablabla" ou git commit -a "blabla"
 
 travail avec un depôt distant : 
