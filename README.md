@@ -45,5 +45,6 @@ Prise en main de capirca.
 Circuit arrivé. Revision de GitHub. Modif de aclgen.py pour le rep de dest des acls crées (filters).
 
 08 Juin 2017 :
+Debut de redaction du STB, et installation de Gobs sur une debian.
 
 09 Juin 2017 :
