@@ -7,6 +7,7 @@ en local :
 git add fichier.txt
 git add -A : tous
 git commit fichier.txt -m "blablabla" ou git commit -a "blabla"
+git commit --amend : modifier le dernier commit (ex : faute de frappes).
 
 travail avec un depôt distant : 
 
