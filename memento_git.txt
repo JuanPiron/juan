@@ -13,6 +13,7 @@ travail avec un depôt distant :
 
 git remote add origin https://... : ajout d'un depôt distant, origin correspond au nom que l'on donne au dépôt
 git remote -v : liste les reps distants (dépôts)
+git remote rm origin : supprime le remote origin
 git pull origin master : mise à jour avec la branche master du dépôt origin
 git push origin master : on envoie à la branche master du dépôt origin nos modifs
 
