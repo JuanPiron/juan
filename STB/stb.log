@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.9)  9 JUN 2017 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.9)  9 JUN 2017 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**stb.tex
+(./stb.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -403,29 +403,29 @@ Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
-) (./main.aux)
-\openout1 = `main.aux'.
+) (./stb.aux)
+\openout1 = `stb.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Info: Redefining \degres on input line 12.
-LaTeX Info: Redefining \dots on input line 12.
-LaTeX Info: Redefining \up on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Info: Redefining \degres on input line 11.
+LaTeX Info: Redefining \dots on input line 11.
+LaTeX Info: Redefining \up on input line 11.
 
 
 Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(frenchb.ldf)                of your document, on input line 12.
+(frenchb.ldf)                of your document, on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -489,13 +489,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 13.
 
-Overfull \hbox (0.7783pt too wide) in paragraph at lines 30--32
+Overfull \hbox (0.7783pt too wide) in paragraph at lines 29--31
 []\OT1/cmr/m/n/10 Capirca est un ou-til con^^Xcu pour uti-li-ser des d^^Sefinit
 ions com-munes des r^^Seseaux,
  []
@@ -503,10 +503,10 @@ ions com-munes des r^^Seseaux,
 <capirca.png, id=1, 851.18pt x 618.31pt>
 File: capirca.png Graphic file (type png)
  <use capirca.png>
-Package pdftex.def Info: capirca.png used on input line 33.
+Package pdftex.def Info: capirca.png used on input line 32.
 (pdftex.def)             Requested size: 340.46596pt x 247.31961pt.
 
-Overfull \hbox (10.46596pt too wide) in paragraph at lines 33--34
+Overfull \hbox (10.46596pt too wide) in paragraph at lines 32--33
 [][] 
  []
 
@@ -514,11 +514,11 @@ Overfull \hbox (10.46596pt too wide) in paragraph at lines 33--34
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 41.
+(Font)              <7> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 41.
+(Font)              <5> on input line 40.
 
-Overfull \hbox (1.67638pt too wide) in paragraph at lines 44--44
+Overfull \hbox (1.67638pt too wide) in paragraph at lines 43--43
 []\OT1/cmr/bx/n/12 Mettre en place un m^^Secanisme de g^^Sen^^Seration des r^^R
 egles
  []
@@ -526,24 +526,24 @@ egles
 [2 <./capirca.png>] <spec.png, id=15, 744.7825pt x 388.45125pt>
 File: spec.png Graphic file (type png)
  <use spec.png>
-Package pdftex.def Info: spec.png used on input line 55.
+Package pdftex.def Info: spec.png used on input line 56.
 (pdftex.def)             Requested size: 297.90771pt x 155.37773pt.
 
-[3 <./spec.png>] (./main.aux) ) 
+[3 <./spec.png>] (./stb.aux) ) 
 Here is how much of TeX's memory you used:
- 2916 strings out of 493029
- 39712 string characters out of 6136235
- 106278 words of memory out of 5000000
- 6426 multiletter control sequences out of 15000+600000
+ 2914 strings out of 493029
+ 39680 string characters out of 6136235
+ 107281 words of memory out of 5000000
+ 6424 multiletter control sequences out of 15000+600000
  7587 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,6n,30p,641b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on main.pdf (3 pages, 197227 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+Output written on stb.pdf (3 pages, 198130 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
