@@ -48,3 +48,4 @@ Circuit arrivé. Revision de GitHub. Modif de aclgen.py pour le rep de dest des 
 Debut de redaction du STB, et installation de Gobs sur une debian.
 
 09 Juin 2017 :
+Formation sauvegarde au CDL3 et finalisation du STB v1.
