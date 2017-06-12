@@ -1,0 +1,5 @@
+"Interface","#","Enabled","Source","User","Security Group","Destination","Security Group","Service","Action","Hits","Logging","Time","Description"
+"Admin-Secu-PGL (122 incoming rules)","1","True","FW-PGL-Nominal","","","any4","","ip","Deny","0","Informational","","[]"
+"Admin-Secu-PGL (122 incoming rules)","2","True","GCTA_SNMP","","","any4","","ip","Deny","0","Informational","","[]"
+"Admin-Secu-PGL (122 incoming rules)","3","True","INT_VPNSSL-Int-Interne-VPNSSL","","","any4","","ip","Deny","0","Informational","","[]"
+"Admin-Secu-PGL (122 incoming rules)","4","True","NET_PROXY-proxy-CSG","","","any4","","ip","Deny","0","Informational","","[]"
