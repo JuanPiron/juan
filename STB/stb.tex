@@ -13,15 +13,15 @@
 \maketitle
 \section{Objet du document}
 
-Cette spécification définit les exigences relatives à une étude de la gestion en configuration des demandes de flux PGL via le logiciel CAPIRCA. Le besoin fonctionnel ayant étaient exprimés autour de 3 points :
+Cette spécification définit les exigences relatives à une étude de la gestion en configuration des demandes de flux PGL via le logiciel CAPIRCA. Le besoin fonctionnel ayant était exprimé autour de 3 points :
 \smallbreak 1/ adapter CAPIRCA pour la génération d’accès-liste ASA (similaires à celles des routeurs cisco).
 \smallbreak 2/ Mettre en place un mécanisme de génération des règles et de leur gestion en configuration à partir des demandes de flux utilisateurs. 
-\smallbreak 3/ adapter les règles existant pour les injecter dans le système CAPIRCA.
+\smallbreak 3/ adapter les règles existantes pour les injecter dans le système CAPIRCA.
 
 \maketitle
 \section{Spécifications techniques actuelles}
 
-{\color{red} Le manager étant en mise à jour je n'ai pas pu voir de démonstration, cette section reste vide pour le moment. Des modifications risquent d'être apportées à la STB après visualisation de cette dernière.}
+{\color{red} Le manager étant en mise à jour, cette section reste vide pour le moment. Des modifications risquent d'être apportées à la STB par la suite.}
 
 \maketitle
 \section{Présentation générale de CAPIRCA}
@@ -37,17 +37,17 @@ Capirca simplifie le développement et la maintenance des filtres réseaux large
 \maketitle
 \subsection{Adapter Capirca pour la génération d’accès-list Cisco ASA}
 
-Capirca et constitué de plusieurs "generator", il y a du Cisco, de l’iptables etc. Après des aports de diverses sources Capirca n’a fait que s’enrichir avec le temps. Il faut savoir en effet que Capirca et disponible en open source sur git et toute contribution est la bienvenue. Il s’avère que l’une des dernières contributions est l’ajout du « generator » ciscoasa par Antonio Ceseracciu. Or ACLs des routeurs PGLs sont du type Cisco ASA v9.1. Cela répond au besoin. Néanmoins s'il existe des différences entre des versions d'ASA il suffira d'adapter le "generator" ciscoasa.
+Capirca est constitué de plusieurs "generator", il y a du Cisco, de l’iptables etc. Après des aports de diverses sources Capirca n’a fait que s’enrichir avec le temps.  A savoir que Capirca et disponible en open source sur git et toute contribution est la bienvenue. Il s’avère que l’une des dernières contributions est l’ajout du « generator » ciscoasa par Antonio Ceseracciu. Or les ACLs des routeurs PGLs sont du type Cisco ASA v9.1. Néanmoins s'il existe des différences entre des versions d'ASA il suffira d'adapter le "generator" ciscoasa.
 
 \maketitle
 \subsection{Mettre en place un mécanisme de génération des règles et de leur gestion en configuration à partir des demandes de flux utilisateurs}
 
-La solution envisagée ici est la création d’un "serveur" git, plus précisément Gobs. L’avantage de Gobs résidant dans l’existence d’une interface web qui permettrait une gestion plus facile et intuitive des différentes ACLs. Tout cela bien sûr est en open source. Capirca sera placé sur un remote repository, il suffira simplement de créer la policie ou de la modifier et de lancer le script python, et par la suite de faire git add, commit et push. Les policies (langage de haut niveau) seront présentes dans le répertoire capirca/policies/pol et les filtres (ACLs) dans le répertoire capirca/filters. 
+La solution envisagée ici est la création d’un "serveur" git, plus précisément Gobs. L’avantage de Gobs réside en l’existence d’une interface web qui permettrait une gestion plus facile et intuitive. Tout cela bien sûr est en open source. Capirca sera placé sur un remote repository, il suffira simplement de créer la policie ou de la modifier et de lancer le script python, et par la suite de faire git add, commit et push. Les policies (langage de haut niveau) seront présentes dans le répertoire capirca/policies/pol et les filtres (ACLs) dans le répertoire capirca/filters. 
 
 \maketitle
-\subsection{Adapter les règles existant pour les injecter dans le système CAPIRCA}
+\subsection{Adapter les règles existantes pour les injecter dans le système CAPIRCA}
 
-En ce qui concerne les règles préexistantes sur les routeurs PGLs les injecters dans le système CAPIRCA revient à réécrire leurs policies. Pour cela il serait possible de créer un script python ou Bash. Mais il s’avère que la manière brute d’écrire les différentes règles (répondant à une demande de flux utilisateur) se présente sous la forme d’un simple fichier CSV. Il paraît donc intéressant de créer un script qui produirait en sortie un fichier en langage de haut niveau. En d’autres termes créer le "generator" du langage de haut niveau de capirca.
+En ce qui concerne les règles préexistantes sur les routeurs PGLs les injecters dans le système Capirca revient à réécrire leurs policies. Pour cela il serait possible de créer un script python ou Bash. Mais il s’avère que la manière brute d’écrire les différentes règles (répondant à une demande de flux utilisateur) se présente sous la forme d’un simple fichier CSV. Il paraît donc intéressant de créer un script qui produirait en sortie un fichier en langage de haut niveau. En d’autres termes créer le "generator" du langage de haut niveau de Capirca.
 
 Ou plus simplement injecter les ACLs existantes dans le répertoire filters sur Gobs. Et par la suite utiliser l'outils diff pour compiler les nouvelles aux anciennes. 
  
