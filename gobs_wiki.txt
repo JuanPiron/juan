@@ -1,0 +1,16 @@
+
+
+1/ Avant toute chose faire un git pull origin master pour être sur d'être à jour et évite tout conflit.
+
+2/ Modifier le fichier policies.csv contenant les différentes règles en fonction des demandes de flux users
+
+3/ Lancer le script opac.py avec comme argument les format de sortis désires : ciscoasa, cisco, iptables
+
+4/ Récuperer les ACLs dans le dossier capirca/filters, et si besoin est le high-level dans le dossier policies/pol
+
+5/ Utilise lgtool pour "pusher" les ACLs sur les routeurs.
+
+6/ Ne pas oubliers de commit et de pusher.
+
+PS : quand vous commiter n'oublier pas que derriere vous il y'en à qui lise, alors soyer claire et consit.
+
