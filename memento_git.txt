@@ -38,6 +38,13 @@ difference :
 
 diff master origin/master : différence entre la branche local et celle dans le rep distant
 
+revenir en arriere :
+
+git log : lister les commits ( et voir le num)
+git checkout <commit> : revenir au commit indiquer comme spectateur
+git reset --hard : revenir au dernier commit 
+git reset <commit> --hard : revenir au commit indique
+
 les differentes copies dans gits : 
 
 workspace, index, local repository, remote repository

@@ -1,0 +1,20 @@
+# coding: utf8
+
+#################################################
+#	Programme Python 2.7			#
+#	auteur : Juan Piron, Kourou, 2017	#
+#	licence : GPL				#
+#################################################
+
+
+############################################
+#	importations de fonctions externes :
+
+import getopt
+import sys
+import csv
+import re
+
+########################################
+#	Définition locale de fonctions :
+

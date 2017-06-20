@@ -49,3 +49,25 @@ Debut de redaction du STB, et installation de Gobs sur une debian.
 
 09 Juin 2017 :
 Formation sauvegarde au CDL3 et finalisation du STB v1.
+
+12 Juin 2017 : 
+Fin redaction du STB et envoie. Config de Gobs, git.
+
+13 Juin 2017 :
+Fonctionnement de capirca, test, qu'est ce que le PGL.
+
+14 Juin 2017
+Debut de programmation de translate.py, permettant de passer d'un langage de bas niveau asa cisco à du .pol, def de la sol de recup de la show-run existante dans capirca.
+
+15 Juin 2017
+Suite de la prog de translate.py.
+
+16 Juin 2017
+Obtention de la derniere show-run. Decisions de recommencer le translate.py en ne ce bassant plus sur le .csv mais directement sur la .txt. Debut de prog de recupObjet.py.
+
+19 Juin 2017
+Prog de recupObjet.txt. Changement avec utilisation des regexs en regexObject.txt.
+
+20 Juin 2017
+Fin prog de regexObject.txt (à pofiner). Plannification du dev de termWrite.py.
+
