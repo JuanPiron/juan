@@ -6,14 +6,14 @@ Entreprise : Telespazio France
 
 Sujet du stage : etude de la gestion en configuration des demandes de flux PGL via le logiciel CAPIRCA.
 
-Description : 
+Description :
 CAPIRCA est un logiciel développé par GOOGLE pour automatiser la création des ACL sur les firewalls.
 
 Il prend en compte les access-list cisco et à ce titre devrait moyennant quelques adaptations, prendre en compte le firewall interne du CSG (PGL).
 
 Le stagiaire étudiera la possibilité de migrer les règles existantes du PGL dans ce logiciel et mettra en place les mécanismes adéquat permettant la gestion de configuration des demandes flux.
 
- 
+
 
 Le stage consistera donc à
 
@@ -23,11 +23,11 @@ Le stage consistera donc à
 
 ·         Adapter les règles existante pour les injecter dans le système CAPIRCA.
 
-Reformulation : 
+Reformulation :
 
 1/ Créer un generator CiscoASA pour les routeurs PGL.
 
-2/ 
+2/
 
 a) Suffit de mettre capirca sur un remote repository de creer la policie ou de la modifer et de lancer le script python, suffit juste ensuite de faire git add, commit et push.
 b) Mettre en place un remote repository sur GitHub permettant la gestion des différents ACLs (filters et policies (surtout)), tout cela directement dans les repertoires de pol et filters de capirca.
@@ -35,13 +35,13 @@ b) Mettre en place un remote repository sur GitHub permettant la gestion des dif
 3/ créer les policies des ACLs déjà existante au niveau de PGLs
 
 
-Compte-rendu journalier : 
+Compte-rendu journalier :
 
 06 Juin 2017 :
 Visite rapide du CT + badge.
 Prise en main de capirca.
 
-07 Juin 2017 : 
+07 Juin 2017 :
 Circuit arrivé. Revision de GitHub. Modif de aclgen.py pour le rep de dest des acls crées (filters).
 
 08 Juin 2017 :
@@ -50,7 +50,7 @@ Debut de redaction du STB, et installation de Gobs sur une debian.
 09 Juin 2017 :
 Formation sauvegarde au CDL3 et finalisation du STB v1.
 
-12 Juin 2017 : 
+12 Juin 2017 :
 Fin redaction du STB et envoie. Config de Gobs, git.
 
 13 Juin 2017 :
@@ -69,5 +69,16 @@ Obtention de la derniere show-run. Decisions de recommencer le translate.py en n
 Prog de recupObjet.txt. Changement avec utilisation des regexs en regexObject.txt.
 
 20 Juin 2017
-Fin prog de regexObject.txt (à pofiner). Plannification du dev de termWrite.py.
+Fin prog de regexObject.py (à pofiner). Plannification du dev de termWrite.py.
 
+21 Juin 2017
+regexObject.py
+
+22 Juin 2017
+regexObject.py
+
+23 Juin 2017
+regexObject.py, termWrite.py
+
+24 Juin 2017
+STB2 et petit tour à Atlas pour trouver des rapports de stage.
