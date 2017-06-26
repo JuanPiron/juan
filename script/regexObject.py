@@ -1,10 +1,10 @@
 # coding: utf8
 
 #################################################
-#	Programme Python 2.7			#
-#	auteur : Juan Piron, Kourou, 2017	#
-#	licence : GPL				#
-#	script : regexObjet.py			#
+#	Programme Python 2.7						#
+#	auteur : Juan Piron, Kourou, 2017			#
+#	licence : GPL								#
+#	script : regexObjet.py						#
 #################################################
 
 
@@ -204,7 +204,7 @@ def traitement():
 									port = 1494
 								else:
 									print("Attention port inconnu, entrer le numéro de port correspondant à "+port+"\n")
-									port = input() 
+									port = input()
 							oFile2.write(str(port)+"/"+protocol+"\n")
 
 						else:
