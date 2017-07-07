@@ -82,3 +82,33 @@ regexObject.py, termWrite.py
 
 24 Juin 2017
 STB2 et petit tour à Atlas pour trouver des rapports de stage.
+
+25 Juin 2017
+Travail sur sync. 
+
+26 Juin 2017
+Travail sur sync.
+
+27 Juin 2017
+Travail surs sync. Plus documentation.
+
+28 Juin 2017
+Travail sur diff, et run.sh. Plus documentation.
+
+29 Juin 2017
+Travail sur diff. Fin test avec run.sh , premiere version beta.
+
+30 Juin 2017
+Configuration du serveur test avec installation de centos 7 et maj.
+
+03 Juillet 2017
+Installation et configuration de gogs.
+
+04 Juillet 2017
+Test de gitolite.
+
+05 Juillet 2017
+Test de gitolite et verif code.
+
+06 Juillet 2017
+Mise en place maquette ciscoasa 5520. 
