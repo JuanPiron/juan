@@ -1,4 +1,4 @@
-Stage 4A STI INSA CVL
+﻿Stage 4A STI INSA CVL
 06 Juin 2017 - 04 Aout 2017
 
 Stagiaire :  Juan PIRON
@@ -111,4 +111,7 @@ Test de gitolite.
 Test de gitolite et verif code.
 
 06 Juillet 2017
-Mise en place maquette ciscoasa 5520. 
+Mise en place maquette ciscoasa 5520.
+
+07 Juillet 2017
+Travail sur pexpect de python pour recuperer la running-config.
