@@ -1,0 +1,34 @@
+
+# firewall ciscoasa
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 intern@192.168.1.1
+
+# between client and gogs-server
+# on client
+ssh-keygen -t rsa
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+chmod  ~/.ssh/know_hosts
+# send the id_rsa.pub public key to the server
+
+# on server
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 644 ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+# into /etc/ssh/sshd_config
+# Disable password authentication forcing use of keys
+PasswordAuthentication no
+
+#gogs
+#décommenter les ligens dans /home/git/gogs/scritps/systemd/gogs.service
+#si déjà installé faire aussi :
+#décommenter les lignes indiquer dans le fichier /etc/systemd/system/gogs.service
+
+ligne du dessus pas vraiment necessaire
+
+il faut désactiver selinux dans /etc/sysconfig/selinux avec le mode permissif.
+
+il faut ajouter dans l'user pas dans ACLs
+

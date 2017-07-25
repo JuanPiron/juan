@@ -115,3 +115,11 @@ Mise en place maquette ciscoasa 5520.
 
 07 Juillet 2017
 Travail sur pexpect de python pour recuperer la running-config.
+
+10 Juillet 2017
+Travail sur paramiko pour recup run.
+
+11 Juillet 2017
+Recup de la run, sys fonctionne manque juste l'export le push et la secu avec ssh. Et aussi enlever les wait dans pre-receive et mettre des expect. (verifier que avoir enlever hook --config ne pose pas de probleme)
+
+

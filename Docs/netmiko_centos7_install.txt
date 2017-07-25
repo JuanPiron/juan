@@ -1,0 +1,13 @@
+# pip
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
+
+# paramiko
+yum install gcc libffi-devel python-devel openssl-devel
+pip install cryptography
+pip install paramiko
+
+# netmiko
+pip install scp
+pip install pyyaml
+pip install pytest
