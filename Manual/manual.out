@@ -1,16 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Pr\351requis}{}% 1
 \BOOKMARK [1][-]{section.2}{Ce qu'est Google/CAPIRCA pour TPZ}{}% 2
 \BOOKMARK [1][-]{section.3}{Ce que n'est pas Google/CAPIRCA pour TPZ}{}% 3
-\BOOKMARK [1][-]{section.4}{Installation}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Pr\351requis}{section.4}% 5
-\BOOKMARK [3][-]{subsubsection.4.1.1}{MariaDB}{subsection.4.1}% 6
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Python}{subsection.4.1}% 7
-\BOOKMARK [3][-]{subsubsection.4.1.3}{SSH}{subsection.4.1}% 8
-\BOOKMARK [3][-]{subsubsection.4.1.4}{Autres}{subsection.4.1}% 9
-\BOOKMARK [2][-]{subsection.4.2}{Proc\351dure}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.3}{D\351ploiement}{section.4}% 11
-\BOOKMARK [1][-]{section.5}{Utilisation}{}% 12
-\BOOKMARK [2][-]{subsection.5.1}{Configuration du d\351p\364t local et du client}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.2}{Exemple}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.3}{Recommandations}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{Rappels succincts sur les commandes Git}{}% 16
+\BOOKMARK [1][-]{section.4}{Pr\351sentation du logiciel}{}% 4
+\BOOKMARK [1][-]{section.5}{Installation}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Pr\351requis}{section.5}% 6
+\BOOKMARK [3][-]{subsubsection.5.1.1}{MariaDB}{subsection.5.1}% 7
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Python}{subsection.5.1}% 8
+\BOOKMARK [3][-]{subsubsection.5.1.3}{SSH}{subsection.5.1}% 9
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Autres}{subsection.5.1}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Proc\351dure}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{D\351ploiement}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Utilisation}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Configuration du d\351p\364t local et du client}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Exemple}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.3}{Recommandations}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Rappels succincts sur les commandes Git}{}% 17

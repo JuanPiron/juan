@@ -2,16 +2,17 @@
 \contentsline {section}{\numberline {1}Pr\IeC {\'e}requis}{3}{section.1}
 \contentsline {section}{\numberline {2}Ce qu'est Google/CAPIRCA pour TPZ}{3}{section.2}
 \contentsline {section}{\numberline {3}Ce que n'est pas Google/CAPIRCA pour TPZ}{3}{section.3}
-\contentsline {section}{\numberline {4}Installation}{3}{section.4}
-\contentsline {subsection}{\numberline {4.1}Pr\IeC {\'e}requis}{3}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}MariaDB}{3}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Python}{4}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}SSH}{4}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4}Autres}{5}{subsubsection.4.1.4}
-\contentsline {subsection}{\numberline {4.2}Proc\IeC {\'e}dure}{5}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}D\IeC {\'e}ploiement}{6}{subsection.4.3}
-\contentsline {section}{\numberline {5}Utilisation}{6}{section.5}
-\contentsline {subsection}{\numberline {5.1}Configuration du d\IeC {\'e}p\IeC {\^o}t local et du client}{6}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Exemple}{7}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Recommandations}{8}{subsection.5.3}
-\contentsline {section}{\numberline {6}Rappels succincts sur les commandes Git}{8}{section.6}
+\contentsline {section}{\numberline {4}Pr\IeC {\'e}sentation du logiciel}{3}{section.4}
+\contentsline {section}{\numberline {5}Installation}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}Pr\IeC {\'e}requis}{4}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}MariaDB}{4}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Python}{4}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}SSH}{4}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Autres}{5}{subsubsection.5.1.4}
+\contentsline {subsection}{\numberline {5.2}Proc\IeC {\'e}dure}{5}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}D\IeC {\'e}ploiement}{6}{subsection.5.3}
+\contentsline {section}{\numberline {6}Utilisation}{6}{section.6}
+\contentsline {subsection}{\numberline {6.1}Configuration du d\IeC {\'e}p\IeC {\^o}t local et du client}{6}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Exemple}{7}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Recommandations}{8}{subsection.6.3}
+\contentsline {section}{\numberline {7}Rappels succincts sur les commandes Git}{9}{section.7}

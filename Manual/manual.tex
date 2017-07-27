@@ -29,11 +29,11 @@
   \section{Prérequis}
 
     Ce manuel n'a pas pour but de décrire l'architecture de Google/CAPIRCA.
-    Ce manuel ne remplace d'aucune manière la documentations de Google/CAPIRCA, il apporte simplement les spécifités de GCT.
+    Ce manuel ne remplace d'aucune manière la documentation de Google/CAPIRCA, il apporte simplement les spécifités de GCT.
     Il est donc nécessaire de lire le README de Google/CAPIRCA.
-    Pour cela il existe la \href{https://github.com/google/capirca/wiki}{wiki} GitHub de Google/CAPIRCA.\smallbreak
+    Pour cela il existe la \href{https://github.com/google/capirca/wiki}{wiki} GitHub de Google/CAPIRCA.
     \definecolor{orange}{RGB}{255,127,0}
-    \noindent\colorbox{orange}{Toutes les adresses ips et les configurations présentes dans ce document sont fictives.}
+    \colorbox{orange}{Toutes les adresses ips et les configurations présentes dans ce document sont fictives.}
 
   \section{Ce qu'est Google/CAPIRCA pour TPZ}
 
@@ -51,6 +51,16 @@
     \noindent Pour modifier : \smallbreak
     3/ réécrire le term correspondant à l'ACL dans le .pol. \smallbreak
     4/ recompiler \smallbreak
+    Ne pas utiliser GCT pour une utilisation autre que celle décrite. Si le besoin et de créer des ACLs de type iptables,
+    juniper ou encore cisco, veuillez utiliser le Google/CAPIRCA original.
+
+  \section{Présentation du logiciel}
+
+  Si vous détenez ce présent document c'est que vous avez aussi l'archive GCT.tar.gz. Cette archive contient 2 dossiers.
+  Le premier contient les fichiers sources originaux de Google/CAPIRCA plus les dossiers sync et diff. \textit{sync/} et
+  \textit{diff} contiennent les différents scripts d'adaptation de Capirca au PGL de TPZ. Sync s'occupe de la synchronisation
+  des objets et diff d'éviter les doublons.
+  A coter de \textit{capirca/} il y a gogsInstall qui contient tous le nécessaire pour l'installation.
 
   \section{Installation}
 
@@ -85,7 +95,7 @@
 
     \subsubsection{SSH}
 
-      Avoir openssh-server sur le serveur et configuré ssh avec un utilisateur ssh git sur le PGL. \bigbreak
+      Avoir openssh-server sur le serveur et configuré ssh avec un utilisateur ssh "git" sur le PGL. \bigbreak
       \noindent Firewall PGL : \smallbreak
 \begin{verbatim}
       hostname(config)# crypto key generate rsa modulus 1024
@@ -95,7 +105,7 @@
       hostname(config)# ssh timeout 30
       hostname(config)# ssh version 2
 \end{verbatim}
-      Cette example de configuration a été fait à partir de la maquette qui utilise un cisco ASA 5520.
+      Cette example de configuration a été fait à partir de une maquette qui utilise un cisco ASA 5520.
       Il peut donc y avoir des différences avec le PGL. Eviter d'utiliser les certificats, sinon modifier les scripts
       pre-receive et post-receive.
       \noindent Entre le client et gogs-server : \bigbreak
@@ -121,14 +131,14 @@
     \subsubsection{Autres}
 
       Configurer SELinux de manière à permettre l'accès à ssh (scp) au dossier tmp pour l'échange des clés.
-      \noindent Installer git : \shellcmdd{yum -y install git} \smallbreak
+      \noindent Installer Git : \shellcmdd{yum -y install git} \smallbreak
       \noindent Une fois Capirca importé il faut installer les prérequis dans \textit{capirca/} à l'aide de :
       \shellcmdd{pip install -r requirements.txt}
 
     \subsection{Procédure}
 
       Sur le serveur "manager" créer l'utilisateur git et définir son mot de passe : \shellcmd{useradd -m git}
-      Ajouter pour l'installation git au groupe sudo : \shellcmd{usermod -aG wheel git}
+      Ajouter pour l'installation, git au groupe sudo : \shellcmd{usermod -aG wheel git}
       Ne pas oublier de l'en retirer après l'installation. \smallbreak
       \noindent Décompresser gogsInstall.tar.gz dans \textit{/home/git} : \shellcmd{tar -xzvf gogsInstall.tar.gz}
       Ce déplacer dans le dossier gogsInstall éditer les scripts python pre-receive et post-receive.
@@ -151,7 +161,7 @@
       HTTP_ADDR = 192.168.1.10
 \end{verbatim}
       Ajouter les droits d'execution au script gogsInstall.sh : \shellcmd{chmod u+x gogsInstall.sh}
-      Exécuter le script en scpécifiant le mot de passe root de mariadb comme arg1. Et scpéfier le mot de passe que vous voulez donner
+      Exécuter le script en scpécifiant le mot de passe root de mariadb comme arg1. Scpéfier le mot de passe que vous voulez donner
       à l'utilisateur git de mariadb en arg2 : \shellcmd{./gogsInstall.sh mdp-root-mariadb mdp-git-mariadb}
       Ouvrir un navigateur et rentrer l'url : \url{http://ip-du-serveur:3000} \smallbreak
       \noindent Une page d'installation s'ouvre, il suffit d'entrer le mot de passe de l'utilisateur git de la bdd mariadb et de confirmer.
@@ -159,11 +169,11 @@
     \subsection{Déploiement}
 
       Pour l'utilisation de Gogs se référer à sa \href{https://gogs.io/docs}{documentation}. \bigbreak
-      \noindent Créer un utilisateur "tpz". A l'aide de tpz ajouter un repository distant nommer "ACLs".
-      Décompresser GCT.tar.gz, uploader capirca dans ACLs. Créer d'autres utilisateurs et les incorporer comme participant en "rw".
-      Récupérer les différentes clés ssh des postes qui cloneront ACLs et les ajouter à tpz en allant dans ses paramètres.
+      \noindent Créer un utilisateur "tpz". A l'aide de tpz ajouter un repository distant nommer "GCT".
+      Décompresser GCT.tar.gz, uploader capirca dans GCT. Créer d'autres utilisateurs et les incorporer comme participant en "rw".
+      Récupérer les différentes clés ssh des postes qui cloneront GCT et les ajouter à tpz en allant dans ses paramètres.
       Ne pas les ajouter au repository mais bien directement dans les paramètres de l'utilisateur tpz.
-      Enfin récuperer la wiki dans \textit{CGT/} et l'ajouter au repository ACLs.
+      Enfin récuperer la wiki dans \textit{CGT/} et l'ajouter au repository GCT.
 \begin{comment}
 \includegraphics[scale=0.4]{capirca.png}
 \end{comment}
@@ -172,15 +182,15 @@
     \subsection{Configuration du dépôt local et du client}
 
       Avant tout transférer sa clé rsa (ssh) à l'admin. Ensuite se placer dans un nouveau repertoire et faire un \texttt{git init}.
-      L'étape suivante et de configurer localement git à l'aide de : \shellcmdd{git config --global user.name "John Doe"}
+      L'étape suivante et de configurer localement Git à l'aide de : \shellcmdd{git config --global user.name "John Doe"}
       \shellcmdd{git config --global user.email johndoe@example.com}\smallbreak
       \noindent Le nom spécifié sera celui qui apparaîtra sur les commits.
       Pour une demande d'ouverture de flux utilisateur créer autant de fichier .pol qu'il y a d'interfaces du PGL concernées.
       Dans le header le champ \texttt{target::} doit avoir pour nom celui de l'interface.
-      Capirca ne comprend que les objets que cela soit pour les réseaux ou les services.
+      Capirca ne comprend que les objets, que cela soit pour les réseaux ou les services.
       Avant de créer un .pol il faut donc créer les objets. Pour les réseaux les ajouter en début du fichier \textit{capirca/def/NETWORK.net}
       et pour les services dans \textit{capirca/def/SERVICES.svc}. GCT récupère de manière automatique les objets présent
-      sur le PGL, donc regarder d'abord si l'objet existe en faisant un CTRL-F à l'aide de l'ip ou du service.
+      sur le PGL, donc regarder d'abord si l'objet existe en faisant un CTRL-F en spécifiant de l'ip ou du service.
       Les demandes au format .pol doivent se trouver dans le dossier \textit{capirca/policies/pol}.
       Après avoir terminer de créer les différents fichier .pol, dans \textit{capirca/} lancer le script  : \texttt{./run.sh} \smallbreak
       \noindent Quand on vous le demandera, entrer un commit. Tous les commits doivent être de la forme : \texttt{ajout de ref-de-la-demande} ou
@@ -189,9 +199,9 @@
       1/ Rechercher ou créer les objets \smallbreak
       2/ Créer les .pol \smallbreak
       3/ \texttt{./run.sh} \bigbreak
-      \noindent Si lors de la compilation (abus de langage) il se produit un git "CONFLICT" se référer à la partie \textit{Rappel succint
-      sur les commandes git}.
-      Avant tout essai assurez-vous d'avoir bien toutes les librairies python requises d'installé : \smallbreak
+      \noindent Si lors de la compilation (abus de langage) il se produit un Git "CONFLICT" se référer à la partie \textit{Rappel succint
+      sur les commandes Git}.
+      Avant tout essai assurez-vous d'avoir bien toutes les librairies python requises d'installées : \smallbreak
       - gflags (\texttt{pip install python-gflags}) \smallbreak
       - getopt \smallbreak
       - csv \smallbreak
