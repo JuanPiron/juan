@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.9)  27 JUL 2017 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.9)  31 JUL 2017 13:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,26 +496,45 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip49
 ) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
- Excluding comment 'comment') (/home/juan/Bureau/stage/Manual/manual.aux)
+ Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+ (/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip50
+\RaggedLeftLeftskip=\skip51
+\RaggedRightLeftskip=\skip52
+\CenteringRightskip=\skip53
+\RaggedLeftRightskip=\skip54
+\RaggedRightRightskip=\skip55
+\CenteringParfillskip=\skip56
+\RaggedLeftParfillskip=\skip57
+\RaggedRightParfillskip=\skip58
+\JustifyingParfillskip=\skip59
+\CenteringParindent=\skip60
+\RaggedLeftParindent=\skip61
+\RaggedRightParindent=\skip62
+\JustifyingParindent=\skip63
+) (/home/juan/Bureau/stage/Manual/manual.aux)
 \openout1 = `manual.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Info: Redefining \degres on input line 22.
-LaTeX Info: Redefining \dots on input line 22.
-LaTeX Info: Redefining \up on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Info: Redefining \degres on input line 23.
+LaTeX Info: Redefining \dots on input line 23.
+LaTeX Info: Redefining \up on input line 23.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
@@ -541,7 +560,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 23.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -549,20 +568,22 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count108
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
  (/home/juan/Bureau/stage/Manual/manual.out) (/home/juan/Bureau/stage/Manual/manual.out)
 \@outlinefile=\write4
 \openout4 = `manual.out'.
 
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 24.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 24.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
+(Font)              <6> on input line 25.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 25.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1
@@ -577,54 +598,113 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `manual.toc'.
 
  [2]
-Overfull \hbox (8.09433pt too wide) in paragraph at lines 31--37
-\T1/cmr/m/n/10 Ce ma-nuel ne rem-place d'au-cune ma-nière la do-cu-men-ta-tion de Google/CAPIRCA,
+Overfull \hbox (31.99274pt too wide) in paragraph at lines 40--41
+ [][][][][][][] 
  []
 
 
-Overfull \hbox (41.7239pt too wide) in paragraph at lines 31--37
-\T1/cmr/m/n/10 README de Google/CAPIRCA. Pour cela il existe la []wiki[] Gi-tHub de Google/CAPIRCA.
+Overfull \hbox (8.73306pt too wide) in paragraph at lines 64--69
+\T1/cmr/m/n/10 Si vous dé-te-nez ce pré-sent do-cu-ment c'est que vous avez aussi l'ar-chive GCT.tar.gz.
  []
 
 
-Overfull \hbox (31.99274pt too wide) in paragraph at lines 31--37
-[][][][][][] 
+Overfull \hbox (3.50543pt too wide) in paragraph at lines 64--69
+\T1/cmr/m/n/10 naux de Google/CAPIRCA plus les dos-siers sync et diff. \T1/cmr/m/it/10 sync/ \T1/cmr/m/n/10 et \T1/cmr/m/it/10 diff \T1/cmr/m/n/10 contiennent
  []
 
 [3]
-Overfull \hbox (85.3949pt too wide) in paragraph at lines 79--79
-[]      \T1/cmtt/m/n/10 mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password')[] 
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
  []
 
-[4] [5] Excluding 'comment' comment. [6]
-Overfull \hbox (36.62903pt too wide) in paragraph at lines 196--198
+
+Overfull \hbox (95.89233pt too wide) in paragraph at lines 95--95
+[]      \T1/cmtt/m/n/10 mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password');"[] 
+ []
+
+[4] [5] <first-time-run.png, id=129, 1268.74pt x 701.62125pt>
+File: first-time-run.png Graphic file (type png)
+ <use first-time-run.png>
+Package pdftex.def Info: first-time-run.png used on input line 184.
+(pdftex.def)             Requested size: 253.7435pt x 140.32176pt.
+ <welcom.png, id=130, 1060.96375pt x 519.9425pt>
+File: welcom.png Graphic file (type png)
+ <use welcom.png>
+Package pdftex.def Info: welcom.png used on input line 190.
+(pdftex.def)             Requested size: 212.18898pt x 103.98665pt.
+ [6 </home/juan/Bureau/stage/Manual/first-time-run.png>] <initialize.png, id=136, 1172.38pt x 397.485pt>
+File: initialize.png Graphic file (type png)
+ <use initialize.png>
+Package pdftex.def Info: initialize.png used on input line 195.
+(pdftex.def)             Requested size: 234.47185pt x 79.49559pt.
+ <collaboration.png, id=137, 1612.0225pt x 725.71124pt>
+File: collaboration.png Graphic file (type png)
+ <use collaboration.png>
+Package pdftex.def Info: collaboration.png used on input line 199.
+(pdftex.def)             Requested size: 322.39879pt x 145.13968pt.
+ <sshkeys.png, id=138, 1582.91376pt x 796.9775pt>
+File: sshkeys.png Graphic file (type png)
+ <use sshkeys.png>
+Package pdftex.def Info: sshkeys.png used on input line 204.
+(pdftex.def)             Requested size: 316.57715pt x 159.39267pt.
+ [7 </home/juan/Bureau/stage/Manual/welcom.png> </home/juan/Bureau/stage/Manual/initialize.png> </home/juan/Bureau/stage/Manual/collaboration.png>]
+Overfull \hbox (24.78181pt too wide) in paragraph at lines 206--208
+\T1/cmr/m/n/10 Ajouter les deux scripts py-thon, \T1/cmtt/m/n/10 pre-receive \T1/cmr/m/n/10 et \T1/cmtt/m/n/10 post-receive\T1/cmr/m/n/10 , dans \T1/cmr/m/it/10 /home/git/gogs-
+ []
+
+
+Overfull \hbox (7.01091pt too wide) in paragraph at lines 206--208
+\T1/cmr/m/it/10 repositories/tpz/gct.git/hooks/\T1/cmr/m/n/10 . En-fin ré-cu-pe-rer la wiki dans \T1/cmr/m/it/10 gog-sIns-tall/ \T1/cmr/m/n/10 et l'ajou-
+ []
+
+<wikiGCT.png, id=144, 1652.1725pt x 835.12pt>
+File: wikiGCT.png Graphic file (type png)
+ <use wikiGCT.png>
+Package pdftex.def Info: wikiGCT.png used on input line 209.
+(pdftex.def)             Requested size: 330.42865pt x 167.02103pt.
+ [8 </home/juan/Bureau/stage/Manual/sshkeys.png> </home/juan/Bureau/stage/Manual/wikiGCT.png>]
+
+/home/juan/Bureau/stage/Manual/manual.tex:222: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222       \shellcmdd{git psuh origin master}
+                                              \smallbreak
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (36.62903pt too wide) in paragraph at lines 231--233
 \T1/cmr/m/n/10 de la forme : \T1/cmtt/m/n/10 ajout de ref-de-la-demande \T1/cmr/m/n/10 ou \T1/cmtt/m/n/10 modification de ref-de-la-demande\T1/cmr/m/n/10 .
  []
 
-[7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+[9] [10] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
  (/home/juan/Bureau/stage/Manual/manual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
 Package rerunfilecheck Info: File `manual.out' has not changed.
-(rerunfilecheck)             Checksum: EF74F135EBBB7B525885A772A5AFC8DE;1086.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
+(rerunfilecheck)             Checksum: A8210D991D1D845D6344518C9648207D;1161.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
  ) 
 Here is how much of TeX's memory you used:
- 6744 strings out of 493029
- 97113 string characters out of 6136235
- 189734 words of memory out of 5000000
- 10178 multiletter control sequences out of 15000+600000
+ 6847 strings out of 493029
+ 99193 string characters out of 6136235
+ 190624 words of memory out of 5000000
+ 10264 multiletter control sequences out of 15000+600000
  14075 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,6n,30p,236b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,6n,30p,236b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on /home/juan/Bureau/stage/Manual/manual.pdf (10 pages, 272029 bytes).
+Output written on /home/juan/Bureau/stage/Manual/manual.pdf (12 pages, 513107 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

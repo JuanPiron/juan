@@ -6,6 +6,7 @@
 \usepackage{color}
 \usepackage{hyperref}
 \usepackage{comment}
+\usepackage{ragged2e}
 \newcommand{\shellcmd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}\\}
 \newcommand{\shellcmdd}[1]{\\\indent\indent\texttt{\footnotesize\# #1}}
 
@@ -28,35 +29,39 @@
 
   \section{Prérequis}
 
+    \justify
     Ce manuel n'a pas pour but de décrire l'architecture de Google/CAPIRCA.
     Ce manuel ne remplace d'aucune manière la documentation de Google/CAPIRCA, il apporte simplement les spécifités de GCT.
     Il est donc nécessaire de lire le README de Google/CAPIRCA.
-    Pour cela il existe la \href{https://github.com/google/capirca/wiki}{wiki} GitHub de Google/CAPIRCA.
+    Pour cela il existe la \href{https://github.com/google/capirca/wiki}{wiki} GitHub de Google/\-CAPIRCA.
+    \bigbreak
+    \centering
     \definecolor{orange}{RGB}{255,127,0}
     \colorbox{orange}{Toutes les adresses ips et les configurations présentes dans ce document sont fictives.}
+    \justify
 
   \section{Ce qu'est Google/CAPIRCA pour TPZ}
 
-    Capirca est un outil conçu pour utiliser des définitions communes des réseaux, des services et des fichiers de règles (politiques) de haut niveau.
+    \noindent Capirca est un outil conçu pour utiliser des définitions communes des réseaux, des services et des fichiers de règles (politiques) de haut niveau.
     Cela facilite le développement et la manipulation des listes de contrôle d'accès réseau (ACL) pour diverses plates-formes.
     CGT est Capirca appliqué à la gestion du PGL. Il permet de rendre plus rapide la prise en charge des demandes d'ouverture de flux utilisateur.
     \smallbreak
 
   \section{Ce que n'est pas Google/CAPIRCA pour TPZ}
 
-    GCT ne remplace en aucun cas le manager (Cisco ASDM). C'est à dire que toutes modifications ou suppression d'une demande ce fait avec le manager.
+    \noindent GCT ne remplace en aucun cas le manager (Cisco ASDM). C'est à dire que toutes modifications ou suppression d'une demande ce fait avec le manager.
     En d'autres termes pour supprimer une ACL ajouter à l'aide de CGT : \smallbreak
     1/ La supprimer dans le fichier .pol correspondant. \smallbreak
     2/ Aller sur le manager et la supprimer. \bigbreak
     \noindent Pour modifier : \smallbreak
     3/ réécrire le term correspondant à l'ACL dans le .pol. \smallbreak
     4/ recompiler \smallbreak
-    Ne pas utiliser GCT pour une utilisation autre que celle décrite. Si le besoin et de créer des ACLs de type iptables,
+    \noindent Ne pas utiliser GCT pour une utilisation autre que celle décrite. Si le besoin est de créer des ACLs de type iptables,
     juniper ou encore cisco, veuillez utiliser le Google/CAPIRCA original.
 
   \section{Présentation du logiciel}
 
-  Si vous détenez ce présent document c'est que vous avez aussi l'archive GCT.tar.gz. Cette archive contient 2 dossiers.
+  \noindent Si vous détenez ce présent document c'est que vous avez aussi l'archive GCT.tar.gz. Cette archive contient 2 dossiers.
   Le premier contient les fichiers sources originaux de Google/CAPIRCA plus les dossiers sync et diff. \textit{sync/} et
   \textit{diff} contiennent les différents scripts d'adaptation de Capirca au PGL de TPZ. Sync s'occupe de la synchronisation
   des objets et diff d'éviter les doublons.
@@ -64,28 +69,39 @@
 
   \section{Installation}
 
-    Cette section concerne l'installation de Gogs sur le serveur (le manager) et le déploiement de GCT.
-    L'installation décrite concerne un serveur Centos 7.
+    \noindent Cette section concerne l'installation de Gogs sur le serveur (le manager) et le déploiement de GCT.
+    L'installation décrite concerne un serveur Centos 7. Il faut avoir au moins deux interfaces réseaux.
+    Une ayant accès à internet et l'autre étant sur le même réseau que le PGL.
 
     \subsection{Prérequis}
+
+      \subsubsection{Utilisateur git}
+
+      \noindent Sur le serveur "manager" créer l'utilisateur git et définir son mot de passe : \shellcmdd{useradd -m git}
+      \shellcmdd{passwd git}\smallbreak
+      \noindent Ajouter pour l'installation, git au groupe sudo : \shellcmd{usermod -aG wheel git}
+      Ne pas oublier de l'en retirer après l'installation.
+      Pour tout le reste de cette installation utiliser "git". \smallbreak
+      \noindent Décompresser gogsInstall.tar.gz dans \textit{/home/git} : \shellcmd{tar -xzvf GCT.tar.gz}
+
       \subsubsection{MariaDB}
 
-      Si la bdd n'existe pas alors l'installer :
+      \noindent Si la bdd n'existe pas alors l'installer :
 \begin{verbatim}
-      sudo yum -y update
-      sudo yum -y install mariadb-server
-      sudo service mariadb start
-      mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password')
+      yum -y update
+      yum -y install mariadb-server
+      service mariadb start
+      mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password');"
 \end{verbatim}
 
       \subsubsection{Python}
 
-      Version 2.7 ou supérieur. \bigbreak
+      \noindent Version 2.7 ou supérieur. \bigbreak
       \noindent Installer pip :
-      \noindent\shellcmdd{curl \"https://bootstrap.pypa.io/get-pip.py\" -o \"get-pip.py\"}
+      \noindent\shellcmdd{curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"}
       \noindent\shellcmdd{python get-pip.py} \smallbreak
       \noindent Installer paramiko :
-      \noindent\shellcmdd{yum install gcc libffi-devel python-devel openssl-devel}
+      \noindent\shellcmdd{yum -y install gcc libffi-devel python-devel openssl-devel}
       \noindent\shellcmdd{pip install cryptography}
       \noindent\shellcmdd{pip install paramiko} \smallbreak
       \noindent Installer netmiko :
@@ -95,7 +111,7 @@
 
     \subsubsection{SSH}
 
-      Avoir openssh-server sur le serveur et configuré ssh avec un utilisateur ssh "git" sur le PGL. \bigbreak
+      \noindent Avoir openssh-server sur le serveur et configuré ssh avec un utilisateur ssh "git" sur le PGL. \bigbreak
       \noindent Firewall PGL : \smallbreak
 \begin{verbatim}
       hostname(config)# crypto key generate rsa modulus 1024
@@ -105,43 +121,41 @@
       hostname(config)# ssh timeout 30
       hostname(config)# ssh version 2
 \end{verbatim}
-      Cette example de configuration a été fait à partir de une maquette qui utilise un cisco ASA 5520.
+      \noindent Cette example de configuration a été fait à partir d'une maquette qui utilise un cisco ASA 5520.
       Il peut donc y avoir des différences avec le PGL. Eviter d'utiliser les certificats, sinon modifier les scripts
       pre-receive et post-receive.
       \noindent Entre le client et gogs-server : \bigbreak
-      Sur un client :
+      Sur un client (dans son home):
       \shellcmdd{ssh-keygen -t rsa}
-      \shellcmdd{chmod 700 ~/.ssh}
-      \shellcmdd{chmod 600 ~/.ssh/id\_rsa}
-      \shellcmdd{chmod 644 ~/.ssh/id\_rsa.pub}
-      \shellcmdd{chmod  ~/.ssh/know\_hosts} \smallbreak
+      \shellcmdd{chmod 700 .ssh}
+      \shellcmdd{chmod 600 .ssh/id\_rsa}
+      \shellcmdd{chmod 644 .ssh/id\_rsa.pub}
+      \shellcmdd{chmod 600 .ssh/know\_hosts} \smallbreak
       Envoyer la clé public id\_rsa.pub public du poste client au server. \bigbreak
-      Sur le serveur :
-      \shellcmdd{cat id\_rsa.pub >> ~/.ssh/authorized\_keys}
-      \shellcmdd{chmod 700 ~/.ssh}
-      \shellcmdd{chmod 644 ~/.ssh/authorized\_keys}
-      \shellcmdd{chmod 600 ~/.ssh/id\_rsa}
-      \shellcmdd{chmod 644 ~/.ssh/id\_rsa.pub} \smallbreak
+      Sur le serveur (dans /home/git) :
+      \shellcmdd{ssh-keygen -t rsa}
+      \shellcmdd{cat id\_rsa.pub >> .ssh/authorized\_keys}
+      \shellcmdd{chmod 700 .ssh}
+      \shellcmdd{chmod 644 .ssh/authorized\_keys}
+      \shellcmdd{chmod 600 .ssh/id\_rsa}
+      \shellcmdd{chmod 644 .ssh/id\_rsa.pub} \smallbreak
 
       \noindent Dans /etc/ssh/sshd\_config désactiver PasswordAuthentication et ainsi forcer l'utilisation des clés :
 \begin{verbatim}
       PasswordAuthentication no
 \end{verbatim}
+      \noindent Ne pas oublier de relancer le serveur ssh : \texttt{systemctl sshd restart}
 
     \subsubsection{Autres}
 
-      Configurer SELinux de manière à permettre l'accès à ssh (scp) au dossier tmp pour l'échange des clés.
+      \noindent Configurer SELinux de manière à permettre l'accès à ssh (scp) au dossier tmp pour l'échange des clés.
       \noindent Installer Git : \shellcmdd{yum -y install git} \smallbreak
       \noindent Une fois Capirca importé il faut installer les prérequis dans \textit{capirca/} à l'aide de :
       \shellcmdd{pip install -r requirements.txt}
 
     \subsection{Procédure}
 
-      Sur le serveur "manager" créer l'utilisateur git et définir son mot de passe : \shellcmd{useradd -m git}
-      Ajouter pour l'installation, git au groupe sudo : \shellcmd{usermod -aG wheel git}
-      Ne pas oublier de l'en retirer après l'installation. \smallbreak
-      \noindent Décompresser gogsInstall.tar.gz dans \textit{/home/git} : \shellcmd{tar -xzvf gogsInstall.tar.gz}
-      Ce déplacer dans le dossier gogsInstall éditer les scripts python pre-receive et post-receive.
+      \noindent Ce déplacer dans le dossier gogsInstall éditer les scripts python pre-receive et post-receive.
       L'adresse ip qui doit être rentrer et celle du PGL, de même que le couple id/password ssh :
 \begin{verbatim}
       pgl = {
@@ -160,37 +174,58 @@
       ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s:%(HTTP_PORT)s/
       HTTP_ADDR = 192.168.1.10
 \end{verbatim}
+      Dans \textit{capirca/} éditer run.sh et sync.sh, modifier en début de script la variable ip qui doit contenir l'adresse ip du serveur.
       Ajouter les droits d'execution au script gogsInstall.sh : \shellcmd{chmod u+x gogsInstall.sh}
       Exécuter le script en scpécifiant le mot de passe root de mariadb comme arg1. Scpéfier le mot de passe que vous voulez donner
       à l'utilisateur git de mariadb en arg2 : \shellcmd{./gogsInstall.sh mdp-root-mariadb mdp-git-mariadb}
       Ouvrir un navigateur et rentrer l'url : \url{http://ip-du-serveur:3000} \smallbreak
       \noindent Une page d'installation s'ouvre, il suffit d'entrer le mot de passe de l'utilisateur git de la bdd mariadb et de confirmer.
+\begin{center}
+      \includegraphics[scale=0.2]{first-time-run.png}\smallbreak
+\end{center}
 
     \subsection{Déploiement}
 
-      Pour l'utilisation de Gogs se référer à sa \href{https://gogs.io/docs}{documentation}. \bigbreak
+\begin{center}
+          \includegraphics[scale=0.2]{welcom.png}\smallbreak
+\end{center}
+      Pour l'utilisation de Gogs se référer à sa \href{https://gogs.io/docs}{documentation}.
       \noindent Créer un utilisateur "tpz". A l'aide de tpz ajouter un repository distant nommer "GCT".
-      Décompresser GCT.tar.gz, uploader capirca dans GCT. Créer d'autres utilisateurs et les incorporer comme participant en "rw".
-      Récupérer les différentes clés ssh des postes qui cloneront GCT et les ajouter à tpz en allant dans ses paramètres.
-      Ne pas les ajouter au repository mais bien directement dans les paramètres de l'utilisateur tpz.
-      Enfin récuperer la wiki dans \textit{CGT/} et l'ajouter au repository GCT.
-\begin{comment}
-\includegraphics[scale=0.4]{capirca.png}
-\end{comment}
+\begin{center}
+      \includegraphics[scale=0.2]{initialize.png}\smallbreak
+\end{center}
+      Créer d'autres utilisateurs et les incorporer comme participant en "rw".\smallbreak
+\begin{center}
+      \includegraphics[scale=0.2]{collaboration.png}\smallbreak
+\end{center}
+        Récupérer les différentes clés ssh des postes qui cloneront GCT et les ajouter à tpz en allant dans ses paramètres.
+        Ne pas les ajouter au repository mais bien directement dans les paramètres de l'utilisateur tpz.
+\begin{center}
+        \includegraphics[scale=0.2]{sshkeys.png}\smallbreak
+\end{center}
+        Ajouter les deux scripts python, \texttt{pre-receive} et \texttt{post-receive}, dans \textit{/home/git/gogs-repositories/tpz/gct.git/hooks/}.
+        Enfin récuperer la wiki dans \textit{gogsInstall/} et l'ajouter au repository GCT.
+\begin{center}
+        \includegraphics[scale=0.2]{wikiGCT.png}\smallbreak
+\end{center}
 
   \section{Utilisation}
     \subsection{Configuration du dépôt local et du client}
 
-      Avant tout transférer sa clé rsa (ssh) à l'admin. Ensuite se placer dans un nouveau repertoire et faire un \texttt{git init}.
-      L'étape suivante et de configurer localement Git à l'aide de : \shellcmdd{git config --global user.name "John Doe"}
+      \noindent Avant tout transférer sa clé rsa (ssh) à l'admin. L'étape suivante et de configurer localement Git à l'aide de : \shellcmdd{git config --global user.name "John Doe"}
       \shellcmdd{git config --global user.email johndoe@example.com}\smallbreak
       \noindent Le nom spécifié sera celui qui apparaîtra sur les commits.
-      Pour une demande d'ouverture de flux utilisateur créer autant de fichier .pol qu'il y a d'interfaces du PGL concernées.
+      \noindent Faire ensuite un clone du dépôt distant en local : \shellcmdd{git clone ssh://git@192.168.1.10:2222/tpz/GCT.wiki.git} \smallbreak
+      \noindent Si c'est le premier client créé : récuperer le dossier capirca et l'ajouter au repertoire git \textit{GCT/} du client, puis :
+      \shellcmdd{git add -A}
+      \shellcmdd{git commit -a -m "first commit"}\smallbreak
+      \shellcmdd{git psuh origin master}\smallbreak
+      \noindent Pour une demande d'ouverture de flux utilisateur créer autant de fichier .pol qu'il y a d'interfaces du PGL concernées.
       Dans le header le champ \texttt{target::} doit avoir pour nom celui de l'interface.
       Capirca ne comprend que les objets, que cela soit pour les réseaux ou les services.
       Avant de créer un .pol il faut donc créer les objets. Pour les réseaux les ajouter en début du fichier \textit{capirca/def/NETWORK.net}
       et pour les services dans \textit{capirca/def/SERVICES.svc}. GCT récupère de manière automatique les objets présent
-      sur le PGL, donc regarder d'abord si l'objet existe en faisant un CTRL-F en spécifiant de l'ip ou du service.
+      sur le PGL, donc regarder d'abord si l'objet existe en faisant un CTRL-F en spécifiant l'ip ou le service.
       Les demandes au format .pol doivent se trouver dans le dossier \textit{capirca/policies/pol}.
       Après avoir terminer de créer les différents fichier .pol, dans \textit{capirca/} lancer le script  : \texttt{./run.sh} \smallbreak
       \noindent Quand on vous le demandera, entrer un commit. Tous les commits doivent être de la forme : \texttt{ajout de ref-de-la-demande} ou
@@ -199,19 +234,16 @@
       1/ Rechercher ou créer les objets \smallbreak
       2/ Créer les .pol \smallbreak
       3/ \texttt{./run.sh} \bigbreak
-      \noindent Si lors de la compilation (abus de langage) il se produit un Git "CONFLICT" se référer à la partie \textit{Rappel succint
+      \noindent Si lors de la compilation (abus de langage) il se produit un Git "CONFLICT" se référer à la partie \textit{Rappels succints
       sur les commandes Git}.
-      Avant tout essai assurez-vous d'avoir bien toutes les librairies python requises d'installées : \smallbreak
+      Avant tout essai assurez-vous d'avoir bien toutes les librairies python requises d'installées et Git : \smallbreak
       - gflags (\texttt{pip install python-gflags}) \smallbreak
-      - getopt \smallbreak
-      - csv \smallbreak
-      - re (\texttt{pip install regex}\smallbreak
-      - socket \smallbreak
-      - netaddr
+      - netaddr \smallbreak
+      - Git (\texttt{yum -y install git})
 
     \subsection{Exemple}
 
-      Voici un exemple de configuration d'une demande .pol et des objets. \smallbreak
+      \noindent Voici un exemple de configuration d'une demande .pol et des objets. \smallbreak
 \begin{verbatim}
       ------ .POL -------
 
@@ -264,14 +296,14 @@
 
     \subsection{Recommandations}
 
-      Ne pas utiliser de charactères spéciaux.
-      Ne pas utiliser de : \ ou d'accents.
+      \noindent Ne pas utiliser de charactères spéciaux.
+      Ne pas utiliser de : slash, backslash ou d'accents.
       Ne pas écrire de \texttt{remark:: } trop longue, la limite est de 50 charactères.
 
 
   \section{Rappels succincts sur les commandes Git}
 
-    En cas de conflit Git c'est toujours mieux de se souvenir des commandes importantes. \bigbreak
+    \noindent En cas de conflit Git c'est toujours mieux de se souvenir des commandes importantes. \bigbreak
     \noindent\texttt{git init} : initialise un repertoire vide \smallbreak
     \noindent\texttt{git clone https://...} : récupère un projet (correspond à un fetch + un merge) \bigbreak
     \noindent En local : \bigbreak
