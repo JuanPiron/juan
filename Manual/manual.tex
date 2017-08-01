@@ -44,13 +44,13 @@
 
     \noindent Capirca est un outil conçu pour utiliser des définitions communes des réseaux, des services et des fichiers de règles (politiques) de haut niveau.
     Cela facilite le développement et la manipulation des listes de contrôle d'accès réseau (ACL) pour diverses plates-formes.
-    CGT est Capirca appliqué à la gestion du PGL. Il permet de rendre plus rapide la prise en charge des demandes d'ouverture de flux utilisateur.
+    GCT est Capirca appliqué à la gestion du PGL. Il permet de rendre plus rapide la prise en charge des demandes d'ouverture de flux utilisateur.
     \smallbreak
 
   \section{Ce que n'est pas Google/CAPIRCA pour TPZ}
 
     \noindent GCT ne remplace en aucun cas le manager (Cisco ASDM). C'est à dire que toutes modifications ou suppression d'une demande ce fait avec le manager.
-    En d'autres termes pour supprimer une ACL ajouter à l'aide de CGT : \smallbreak
+    En d'autres termes pour supprimer une ACL ajouter à l'aide de GCT : \smallbreak
     1/ La supprimer dans le fichier .pol correspondant. \smallbreak
     2/ Aller sur le manager et la supprimer. \bigbreak
     \noindent Pour modifier : \smallbreak
@@ -238,7 +238,7 @@
       sur les commandes Git}.
       Avant tout essai assurez-vous d'avoir bien toutes les librairies python requises d'installées et Git : \smallbreak
       - gflags (\texttt{pip install python-gflags}) \smallbreak
-      - netaddr \smallbreak
+      - netaddr (\texttt{pip install netaddr}) \smallbreak
       - Git (\texttt{yum -y install git})
 
     \subsection{Exemple}
