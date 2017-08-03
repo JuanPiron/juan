@@ -132,7 +132,7 @@
       \shellcmdd{chmod 644 .ssh/id\_rsa.pub}
       \shellcmdd{chmod 600 .ssh/know\_hosts} \smallbreak
       Envoyer la clé public id\_rsa.pub public du poste client au server. \bigbreak
-      Sur le serveur (dans /home/git) :
+      Sur le serveur dans un utilisateur autre que git (ex : /home/intern) :
       \shellcmdd{ssh-keygen -t rsa}
       \shellcmdd{cat id\_rsa.pub >> .ssh/authorized\_keys}
       \shellcmdd{chmod 700 .ssh}
@@ -140,7 +140,8 @@
       \shellcmdd{chmod 600 .ssh/id\_rsa}
       \shellcmdd{chmod 644 .ssh/id\_rsa.pub} \smallbreak
 
-      \noindent Dans /etc/ssh/sshd\_config désactiver PasswordAuthentication et ainsi forcer l'utilisation des clés :
+      \noindent Le serveur Gogs utilise déjà le fichier \textit{authorized\_keys} de l'utilisateur git.
+      Il est donc nécessaire de passer par un autre utilisateur pour tous échanges ssh. Dans /etc/ssh/sshd\_config désactiver PasswordAuthentication et ainsi forcer l'utilisation des clés :
 \begin{verbatim}
       PasswordAuthentication no
 \end{verbatim}
@@ -149,6 +150,7 @@
     \subsubsection{Autres}
 
       \noindent Configurer SELinux de manière à permettre l'accès à ssh (scp) au dossier tmp pour l'échange des clés.
+      \shellcmdd{semanage permissive -a ssh\_keygen\_t} \smallbreak
       \noindent Installer Git : \shellcmdd{yum -y install git} \smallbreak
       \noindent Une fois Capirca importé il faut installer les prérequis dans \textit{capirca/} à l'aide de :
       \shellcmdd{pip install -r requirements.txt}
@@ -174,7 +176,8 @@
       ROOT_URL = %(PROTOCOL)s://%(DOMAIN)s:%(HTTP_PORT)s/
       HTTP_ADDR = 192.168.1.10
 \end{verbatim}
-      Dans \textit{capirca/} éditer run.sh et sync.sh, modifier en début de script la variable ip qui doit contenir l'adresse ip du serveur.
+      Dans \textit{capirca/} éditer run.sh et sync.sh, modifier en début de script les variable ip et user qui doivent contenir l'adresse ip du serveur Gogs
+      et le nom de l'utilisateur contenant les clés ssh.
       Ajouter les droits d'execution au script gogsInstall.sh : \shellcmd{chmod u+x gogsInstall.sh}
       Exécuter le script en scpécifiant le mot de passe root de mariadb comme arg1. Scpéfier le mot de passe que vous voulez donner
       à l'utilisateur git de mariadb en arg2 : \shellcmd{./gogsInstall.sh mdp-root-mariadb mdp-git-mariadb}
